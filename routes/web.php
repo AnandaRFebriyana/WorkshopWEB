@@ -15,5 +15,8 @@ use App\Http\Controllers\biodataController;
 |
 */
 
-Route::get('/home', [homeController::class, 'index']);
-Route::get('/biodata', [biodataController::class, 'index']);
+// Route::get('/biodata', [biodataController::class, 'index']);
+// Route::get('/', function() {
+//     return view('index');
+// });
+Route::get('/', [homeController::class, 'index']);
