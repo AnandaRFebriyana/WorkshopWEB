@@ -6,9 +6,9 @@
     <title>Biodata Diri</title>
 </head>
 <body>
-    <p>Ananda Rizky Febriyana</p>
-    <p>Jurusan Teknologi Informasi</p>
-    <p>Prodi Teknik Informatika</p>
-    <p>Golongan E</p>
+    <p>Nama: {{ $data['nama_mhs'] }}</p>
+    <p>Alamat: {{ $data['alamat'] }}</p>
+    <p>TTL: {{ $data['ttl'] }}</p>
+    <p>Status: {{ $data['status'] }}</p>
 </body>
 </html>
