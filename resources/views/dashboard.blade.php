@@ -45,52 +45,6 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <!-- Left col -->
-        <section class="col-lg-6 connectedSortable">
-          <!-- Calendar -->
-          <div class="card bg-gradient-success">
-            <div class="card-header border-0">
-              <h3 class="card-title">
-                <i class="far fa-calendar-alt"></i>
-                Calendar
-              </h3>
-              <!-- tools card -->
-              <div class="card-tools">
-                <!-- button with a dropdown -->
-                <div class="btn-group">
-                  <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
-                    <i class="fas fa-bars"></i>
-                  </button>
-                  <div class="dropdown-menu" role="menu">
-                    <a href="#" class="dropdown-item">Add new event</a>
-                    <a href="#" class="dropdown-item">Clear events</a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">View calendar</a>
-                  </div>
-                </div>
-                <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-              <!-- /. tools -->
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body pt-0">
-              <!--The calendar -->
-              <div id="calendar" style="width: 100%"></div>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </section>
-        <!-- /.Left col -->
-
-        <!-- Left col -->
 <section class="col-lg-6 connectedSortable">
     <!-- Calendar -->
     <div class="card bg-gradient-success">
@@ -103,24 +57,35 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-            <form action="/loading" method="POST">
+            <form action="/add" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="nama_mhs">Nama</label>
                     <input type="text" class="form-control" id="nama" placeholder="Masukkan nama" name="nama">
                 </div>
                 <div class="form-group">
-                    <label for="alamat">Alamat</label>
-                    <textarea class="form-control" id="alamat" placeholder="Masukkan alamat" name="alamat"></textarea>
+                    <label for="alamat">Kota</label>
+                    <textarea class="form-control" id="alamat" placeholder="Masukkan kota" name="alamat"></textarea>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="ttl">TTL</label>
                     <textarea class="form-control" id="ttl" placeholder="Masukkan tempat,tanggal lahir" name="ttl"></textarea>
-                </div>
+                </div> -->
                 <div class="form-group">
+                    <label for="ttl">TTL</label>
+                    <input type="date" class="form-control" id="ttl" name="ttl">
+                </div>
+                <!-- <div class="form-group">
                     <label for="status">Status</label>
                     <textarea class="form-control" id="status" placeholder="Masukkan status" name="status"></textarea>
-                </div>
+                </div> -->
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select class="form-control" id="status" name="status">
+                      <option value="aktif">Aktif</option>
+                      <option value="tidak aktif">Tidak Aktif</option>
+                    </select>
+              </div>
                 <button type="submit" class="btn btn-primary" name="button">Submit</button>
             </form>
         </div>

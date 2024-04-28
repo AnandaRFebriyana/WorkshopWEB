@@ -27,6 +27,6 @@ class homeController extends Controller
         'status' => $request->status
         ];
 
-        return view('biodata', ['data' => $data]);
+        return redirect()->route('mahasiswas');
     }
 }

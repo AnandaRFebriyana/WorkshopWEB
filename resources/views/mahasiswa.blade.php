@@ -56,11 +56,6 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Data Mahasiswa</h3>
-                <div class="card-tools">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">
-                    Create
-                  </button>
-                </div>
               </div>
               <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -72,15 +67,15 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <form id="createForm" method="POST">
+                      <form id="createForm" method="POST" action="/add" >
                         @csrf
                         <div class="form-group">
                           <label for="nama_mhs">Nama</label>
                           <input type="text" class="form-control" id="nama" placeholder="Masukkan nama" name="nama">
                         </div>
                         <div class="form-group">
-                          <label for="alamat">Alamat</label>
-                          <textarea class="form-control" id="alamat" placeholder="Masukkan alamat" name="alamat"></textarea>
+                          <label for="alamat">Kota</label>
+                          <textarea class="form-control" id="alamat" placeholder="Masukkan kota" name="alamat"></textarea>
                         </div>
                         <div class="form-group">
                           <label for="ttl">TTL</label>
@@ -107,7 +102,7 @@
                     <tr>
                       <th>No</th>
                       <th>Nama</th>
-                      <th>Alamat</th>
+                      <th>Kota</th>
                       <th>TTL</th>
                       <th>Status</th>
                       <th>Aksi</th>
@@ -140,7 +135,7 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
+  <!-- <script>
     function submitForm() {
       // Ambil data dari formulir
       var formData = $('#createForm').serialize();
@@ -161,5 +156,5 @@
         }
       });
     }
-  </script>
+  </script> -->
 @endsection
